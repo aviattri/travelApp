@@ -3,7 +3,11 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {COLORS, SIZES, icons} from './app/constants/index';
+
+// screens
 import {Onboarding, DestinationDetail} from './app/screens/index';
+// tabs
+import Tabs from './app/navigation/tabs';
 
 const theme = {
   ...DefaultTheme,
@@ -46,6 +50,7 @@ const App = () => {
             },
           }}
         />
+        <Stack.Screen name="Home" component={Tabs} />
         <Stack.Screen name="DestinationDetail" component={DestinationDetail} />
       </Stack.Navigator>
     </NavigationContainer>
