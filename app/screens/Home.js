@@ -66,7 +66,9 @@ const Home = ({navigation}) => {
           ...destinationStyle,
         }}
         onPress={() => {
-          navigation.navigate('DestinationDetail');
+          navigation.navigate('DestinationDetail', {
+            details: item,
+          });
         }}>
         <Image
           source={item.img}
@@ -174,7 +176,8 @@ const Home = ({navigation}) => {
           style={{
             marginTop: SIZES.padding,
             marginHorizontal: SIZES.padding,
-            ...FONTS.h3,
+            paddingBottom: SIZES.radius,
+            ...FONTS.h2,
           }}>
           Destination
         </Text>
