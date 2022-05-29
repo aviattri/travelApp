@@ -7,33 +7,25 @@ import {COLORS, icons} from '../constants';
 
 const Tab = createMaterialBottomTabNavigator();
 
-const tabOptions = {
-  showLabel: false,
-  labelStyle: {
-    marginTop: 20,
-    fontSize: 12,
+const barStyle = {
+  backgroundColor: '#ffff',
+  paddingHorizontal: 5,
+  height: 90,
+  shadowColor: '#000',
+  shadowOffset: {
+    width: 0,
+    height: 10,
   },
-  style: {
-    height: 90,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
-    shadowOpacity: 0.53,
-    shadowRadius: 13.97,
-    elevation: 5,
-  },
+  shadowOpacity: 0.53,
+  shadowRadius: 13.97,
+  elevation: 5,
 };
 
 const Tabs = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={tabOptions}
+      barStyle={barStyle}
       screenOptions={({route}) => ({
-        tabBarLabelStyle: {marginTop: 20},
-        tabBarItemStyle: {width: 100},
-        tabBarStyle: {backgroundColor: 'black'},
         tabBarIcon: ({focused}) => {
           const tintColor = focused ? COLORS.primary : COLORS.gray;
           switch (route.name) {
@@ -44,8 +36,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30,
+                    width: 25,
+                    height: 25,
                   }}
                 />
               );
@@ -56,8 +48,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30,
+                    width: 25,
+                    height: 25,
                   }}
                 />
               );
@@ -68,8 +60,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30,
+                    width: 25,
+                    height: 25,
                   }}
                 />
               );
@@ -80,8 +72,8 @@ const Tabs = () => {
                   resizeMode="contain"
                   style={{
                     tintColor: tintColor,
-                    width: 30,
-                    height: 30,
+                    width: 25,
+                    height: 25,
                   }}
                 />
               );
